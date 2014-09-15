@@ -20,13 +20,14 @@ Tasks
 - ```grunt build``` : Build the mails to ```dist```
 - ```grunt send --email=the_email_file_name_without_extension``` : Send a test email
 - ```grunt watchit``` : Watch and build
-- ```grunt cdn``` : CDNfys assets and emails (the ```dist``` html files are production ready)
+- ```grunt cdn``` : CDNifies assets and emails (the ```dist``` html files are production ready)
 
 Emails templates
 ================
 - Handlebars format
 - Located in ```src/emails```
 - As many as you want
+- Assets basepath is ```./`` : ```<img src="img/logo.png" height="50" alt="Mailgun">```
 
 Litmus
 ======
