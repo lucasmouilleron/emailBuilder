@@ -51,7 +51,7 @@ grunt.initConfig({
         style: "expanded"
       },
       files: {
-        "<%=src%>/css/main.css": "<%=src%>/css/scss/main.scss"
+        "<%=dist%>/css/main.css": "<%=src%>/scss/main.scss"
       }
     }
   },
@@ -68,7 +68,7 @@ grunt.initConfig({
     main: {
       expand: true,
       cwd: "<%=src%>",
-      src: ["css/*.css","img/*"],
+      src: ["img/*"],
       dest: "<%=dist%>",
     },
   },
@@ -92,7 +92,7 @@ grunt.initConfig({
     }
   },
   watch: {
-    files: ["<%=src%>/css/scss/*","<%=src%>/emails/*"],
+    files: ["<%=src%>/scss/*","<%=src%>/emails/*"],
     tasks: ["build"]
   },
   mandrill: {
