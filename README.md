@@ -27,7 +27,7 @@ Emails templates
 - Handlebars format
 - Located in ```src/emails```
 - As many as you want
-- Assets basepath is ```./`` : ```<img src="img/logo.png" height="50" alt="Mailgun">```
+- Assets basepath is ```./``` : ```<img src="img/logo.png" height="50" alt="Mailgun">```
 
 Litmus
 ======
