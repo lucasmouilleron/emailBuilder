@@ -12,14 +12,21 @@ Run
 ===
 - ```cd build```
 - ```npm install```
+- ```cp config.json.sample config.json```
 - Type ```grunt``` and follow instructions
 
 Tasks
 =====
 - ```grunt build``` : Build the mails to ```dist```
-- ```grunt send --template=the_template_name``` : Send a test email
+- ```grunt send --email=the_email_file_name_without_extension``` : Send a test email
 - ```grunt watchit``` : Watch and build
 - ```grunt cdn``` : CDNfys assets and emails (the ```dist``` html files are production ready)
+
+Emails templates
+================
+- Handlebars format
+- Located in ```src/emails```
+- As many as you want
 
 Litmus
 ======
