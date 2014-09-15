@@ -98,7 +98,7 @@ grunt.initConfig({
   mandrill: {
     mailer: {
       options: {
-        key: "AhD7RXY7ZJmY-NuAQMjJWg",
+        key: "<%=cfg.mandrillKey%>",
         sender: "<%=cfg.testSender%>",
         recipient: "<%=cfg.testReciever%>",
         subject: "Email test for <%=cfg.projectName%> / "+emailSelected
