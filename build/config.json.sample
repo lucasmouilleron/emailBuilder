@@ -1,0 +1,9 @@
+{
+  "projectName":"my-test",
+  "testSender":"fill in",
+  "testReciever":"fill in",
+  "awsKey":"fill in",
+  "awsSecretAccessKey":"fill in",
+  "awsRegion":"us-east-1",
+  "awsBucket":"tfill in"
+}
