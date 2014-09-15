@@ -2,8 +2,8 @@ module.exports = function(grunt) {
 
 /////////////////////////////////////////////////////////////////////////////
 var task = grunt.cli.tasks[0];
-if(task == "send" && grunt.option("template") == undefined) {
-  grunt.fail.warn("You have to speficy a template with --template=the_template_name");
+if(task == "send" && grunt.option("email") == undefined) {
+  grunt.fail.warn("You have to speficy a email with --email=the_email_file_name_without_extension");
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -84,9 +84,9 @@ grunt.initConfig({
         key: "AhD7RXY7ZJmY-NuAQMjJWg",
         sender: "<%=cfg.testSender%>",
         recipient: "<%=cfg.testReciever%>",
-        subject: "Email test for <%=cfg.projectName%> / "+grunt.option("template")
+        subject: "Email test for <%=cfg.projectName%> / "+grunt.option("email")
       },
-      src: ["<%=dist%>/"+grunt.option("template")+".html"]
+      src: ["<%=dist%>/"+grunt.option("email")+".html"]
     }
   },
   aws_s3: {
@@ -137,7 +137,7 @@ grunt.loadNpmTasks("grunt-mkdir");
 grunt.registerTask("default", "Help instructions", ["help"]);
 grunt.registerTask("help", "Help instructions", ["availabletasks"]);
 grunt.registerTask("build", "Build the mails", ["mkdir:init","sass","assemble","copy","premailer","clean:postInline"]);
-grunt.registerTask("send", "Send the email (--template=the_template_name)", ["cdn","mandrill"]);
+grunt.registerTask("send", "Send the email (--email=the_email_file_name_without_extension)", ["cdn","mandrill"]);
 grunt.registerTask("cdn", "CDNfys assets and emails", ["build","aws_s3","cdnify"]);
 grunt.registerTask("cleanup", "Clean project", ["clean:all"]);
 grunt.registerTask("watchit", "Watch and build", ["watch"]);
