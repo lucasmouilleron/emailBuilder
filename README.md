@@ -10,15 +10,16 @@ Installation
 
 Run
 ===
+- ```cd build```
 - ```npm install```
 - Type ```grunt``` and follow instructions
 
 Tasks
 =====
-- ```grunt build``` : build the emails from ```src/emails``` to ```dist```
-- ```grunt send --template=the_template_name``` : sends a test
-- ```grunt watch``` : watch formodification and build
-- ```grunt cdn``` : publish assets to CDN (the ```dist``` html files are production ready)
+- ```grunt build``` : Build the mails to ```dist```
+- ```grunt send --template=the_template_name``` : Send a test email
+- ```grunt watchit``` : Watch and build
+- ```grunt cdn``` : CDNfys assets and emails (the ```dist``` html files are production ready)
 
 Litmus
 ======
