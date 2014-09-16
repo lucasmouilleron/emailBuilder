@@ -37,6 +37,18 @@ Emails templates
 - As many as you want (for better performane, remove the templates you don't want to use)
 - Assets basepath is ```./``` : ```<img src="img/logo.png" height="50" alt="Mailgun">``` or ```<link href="css/main.css" media="all" rel="stylesheet" type="text/css"/>```
 
+Sending
+-------
+- Email sending is taking care by mandrill, which is great
+- Create a manrill account and an API key
+- Configure the builder : set ```testSender```, ```testReciever``` and ```mandrillKey``` in ```config.json```
+
+CDN
+---
+- Uses AWS S3 as a CDN
+- Configure the builder : set ```awsKey```, ```awsSecretAccessKey``` and ```awsBucket``` in ```config.json```
+- Create the bucket on S3 (the name you defined in ```awsBucket```)
+
 Litmus
 ------
 - Create a test project in Litmus
