@@ -1,7 +1,8 @@
 The email-builder
 =================
 
-A grunt based email builder for designing, testing and pub
+A grunt based email builder for designing, testing and pub.
+
 Relies on the Ink framework from Zurb for templates.
 
 Installation
