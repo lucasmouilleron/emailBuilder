@@ -24,16 +24,18 @@ Run
 
 Tasks
 -----
-- ```grunt build``` : Build the mails to ```dist```
-- ```grunt send --email=the_email_file_name_without_extension``` : Send a test email
-- ```grunt watchit``` : Watch and build
-- ```grunt cdn``` : CDNifies assets and emails (the ```dist``` html files are production ready)
+- ```grunt build --c=the_campaign_folder_name``` : Build the mails to ```dist```
+- ```grunt send --e=the_email_file_name_without_extension``` : Send a test email
+- ```grunt watchit --c=the_campaign_folder_name``` : Watch and build
+- ```grunt cdn --c=the_campaign_folder_name``` : CDNifies assets and emails (the ```dist``` html files are production ready)
 
-Emails templates
-----------------
+Campaigns
+---------
+- Campaigns are located in ```campaigns```
+- One campaign can contain more than one email
 - Handlebars format
 - Based on the Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php)
-- Located in ```src/emails```
+- Located in ```campaigns/emails```
 - As many as you want (for better performane, remove the templates you don't want to use)
 - Assets basepath is ```./``` : ```<img src="img/logo.png" height="50" alt="Mailgun">``` or ```<link href="css/main.css" media="all" rel="stylesheet" type="text/css"/>```
 
