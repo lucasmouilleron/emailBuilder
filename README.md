@@ -46,7 +46,7 @@ Sending
 - Email sending is taking care by mandrill, which is great
 - Create a manrill account and an API key
 - Configure the builder : set ```testSender```, ```testReciever``` and ```mandrillKey``` in ```config.json```
-- ```testReciever`` can be an array for multiple receipents
+- ```testReciever``` can be an array for multiple receipents
 
 CDN
 ---

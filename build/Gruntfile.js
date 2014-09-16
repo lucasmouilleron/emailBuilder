@@ -18,27 +18,25 @@ module.exports = function(grunt) {
   var emailSelectedPath = campaignSelectedPath+"/"+emailSelected+".hbs";
   var availableCampaigns = getAvailableCampaigns();
   /////////////////////////////////////////////////////////////////////////////
-  if(task == "send" || task == "build" || task == "cdn" || task == "watch") {
+  if(["send","build","cdn","watch"].contains(task)) {
     if(campaignSelected == undefined || !grunt.file.exists(campaignSelectedPath)) {
       breakLine();
       grunt.fail.warn("You have to speficy an existing campaign to send with --campaign=the_campaign_folder_name");  
       grunt.log.warn("Available campaigns : "+availableCampaigns.join(", ").blue);
     }
-  }
-  if(task == "send") {
-    if(emailSelected == undefined || !grunt.file.exists(emailSelectedPath)) {
-      breakLine();
-      grunt.log.warn("You have to speficy an existing email to send with --email=the_email_file_name_without_extension");
-      grunt.log.warn("Available emails : "+getAvailableEmailsForCampaign(campaignSelected).replace(".hbs","").join(", ").blue);
-      fail();
+    if(["send"].contains(task)) {
+      if(emailSelected == undefined || !grunt.file.exists(emailSelectedPath)) {
+        breakLine();
+        grunt.log.warn("You have to speficy an existing email to send with --email=the_email_file_name_without_extension");
+        grunt.log.warn("Available emails : "+getAvailableEmailsForCampaign(campaignSelected).replace(".hbs","").join(", ").blue);
+        fail();
+      }
     }
-  }
-
-  /////////////////////////////////////////////////////////////////////////////  
-  breakLine();
-  grunt.log.ok("Campaign selected : "+campaignSelected.green);
-  if(emailSelected != undefined) {
-    grunt.log.ok("Email selected : "+emailSelected.green);
+    breakLine();
+    grunt.log.ok("Campaign selected : "+campaignSelected.green);
+    if(emailSelected != undefined) {
+      grunt.log.ok("Email selected : "+emailSelected.green);
+    }
   }
 
   /////////////////////////////////////////////////////////////////////////////
@@ -171,11 +169,11 @@ module.exports = function(grunt) {
   /////////////////////////////////////////////////////////////////////////////
   grunt.registerTask("default", "Help instructions", ["help"]);
   grunt.registerTask("help", "Help instructions", ["availabletasks"]);
-  grunt.registerTask("build", "Build the mails (--campaign=the_campaign_folder_name)", ["mkdir:init","sass","assemble","copy","premailer","clean:postInline"]);
-  grunt.registerTask("send", "Send the email (--campaign=the_campaign_folder_name, --email=the_email_file_name_without_extension)", ["cdn","mandrill"]);
-  grunt.registerTask("cdn", "CDNfys assets and emails (--campaign=the_campaign_folder_name)", ["build","aws_s3","cdnify"]);
+  grunt.registerTask("build", "Build a campaign (--campaign=the_campaign_folder_name)", ["mkdir:init","sass","assemble","copy","premailer","clean:postInline"]);
+  grunt.registerTask("send", "Send an email of a campaign (--campaign=the_campaign_folder_name, --email=the_email_file_name_without_extension)", ["cdn","mandrill"]);
+  grunt.registerTask("cdn", "CDNfys assets and emails of a campaign (--campaign=the_campaign_folder_name)", ["build","aws_s3","cdnify"]);
   grunt.registerTask("cleanup", "Clean everything", ["clean:all"]);
-  grunt.registerTask("watchit", "Watch and build (--campaign=the_campaign_folder_name if m", ["watch"]);
+  grunt.registerTask("watchit", "Watch and build a campaign (--campaign=the_campaign_folder_name)", ["watch"]);
 
   /////////////////////////////////////////////////////////////////////////////
   function getCampaignSelected() {
@@ -240,4 +238,9 @@ Array.prototype.replace = function(find, replace) {
     this[i] = this[i].replace(find, replace);
   }
   return this;
+};
+
+/////////////////////////////////////////////////////////////////////////////
+Array.prototype.contains = function(element){
+  return this.indexOf(element) > -1;
 };

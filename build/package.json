@@ -1,5 +1,5 @@
 {
-  "name": "email-template",
+  "name": "email-builder",
   "version": "0.1.0",
   "devDependencies": {
     "assemble": "0.4.37",
