@@ -3,6 +3,8 @@ The email-builder
 
 A grunt based email builder for designing, testing and publishing.
 
+Multiple campaigns and email ready.
+
 Relies on the Ink framework from Zurb for templates.
 
 Installation
@@ -24,19 +26,18 @@ Run
 
 Tasks
 -----
-- ```grunt build --c=the_campaign_folder_name``` : Build the mails to ```dist```
-- ```grunt send --e=the_email_file_name_without_extension``` : Send a test email
-- ```grunt watchit --c=the_campaign_folder_name``` : Watch and build
-- ```grunt cdn --c=the_campaign_folder_name``` : CDNifies assets and emails (the ```dist``` html files are production ready)
+- ```grunt build``` : Builds a campaign to ```campaign-dist/campaign_name```
+- ```grunt watchit``` : Watches and builds a campaign
+- ```grunt cdn``` : CDNifies assets and emails for a campaign (the ```campaign-dist/campaign_name``` html files are production ready)
+- ```grunt send``` : Sends a test email of a campaign
 
 Campaigns
 ---------
+- Archives and templates are located ```campaign-archives``` and ```campaign-archives/_templates```
 - Campaigns are located in ```campaigns```
 - One campaign can contain more than one email
-- Handlebars format
+- Emails are written with handlebars format
 - Based on the Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php)
-- Located in ```campaigns/emails```
-- As many as you want (for better performane, remove the templates you don't want to use)
 - Assets basepath is ```./``` : ```<img src="img/logo.png" height="50" alt="Mailgun">``` or ```<link href="css/main.css" media="all" rel="stylesheet" type="text/css"/>```
 
 Sending
