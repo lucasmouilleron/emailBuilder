@@ -44,5 +44,5 @@ Litmus
 
 Credits
 -------
-Heavily based on [https://github.com/leemunroe/grunt-email-design](https://github.com/leemunroe/grunt-email-design)
-Thanks to the guys at [Zurb](http://zurb.com/)
+- Heavily based on [https://github.com/leemunroe/grunt-email-design](https://github.com/leemunroe/grunt-email-design)
+- Thanks to the guys at [Zurb](http://zurb.com/)
