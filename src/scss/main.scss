@@ -1,8 +1,4 @@
-// Main scss styles
-@import 'config';
-@import 'global';
-@import 'layout';
-@import 'type';
-@import 'links';
-@import 'other';
-@import 'responsive';
+////////////////////////////////////////////////////////////////////////////////////////
+@import "config";
+@import "reset";
+@import "commons";

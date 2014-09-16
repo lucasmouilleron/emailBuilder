@@ -50,9 +50,7 @@ grunt.initConfig({
       options: {
         style: "expanded"
       },
-      files: {
-        "<%=dist%>/css/main.css": "<%=src%>/scss/main.scss"
-      }
+      files: [{expand: true, dest:"<%=dist%>/css", cwd:"<%=src%>/scss", src:["*.scss"], ext: ".css"}]
     }
   },
   assemble: {
