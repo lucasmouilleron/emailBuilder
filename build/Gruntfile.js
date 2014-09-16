@@ -117,7 +117,7 @@ module.exports = function(grunt) {
           key: "<%=cfg.mandrillKey%>",
           sender: "<%=cfg.testSender%>",
           recipient: "<%=cfg.testReciever%>",
-          subject: "Email test for <%=cfg.projectName%> / <%=emailSelected%>"
+          subject: "Email test for <%=campaignSelected%> / <%=emailSelected%>"
         },
         src: ["<%=dist%>/<%=emailSelected%>.html"]
       }
@@ -134,14 +134,14 @@ module.exports = function(grunt) {
           differential: true 
         },
         files: [
-        {expand: true, cwd: "<%=src%>", src: ["**/*.jpg","**/*.png","**/*.gif","**/*.jpeg"], dest: "<%=cfg.projectName%>"},
+        {expand: true, cwd: "<%=src%>", src: ["**/*.jpg","**/*.png","**/*.gif","**/*.jpeg"], dest: "<%=campaignSelected%>"},
         ]
       }
     },
     cdnify: {
       dist: {
         options: {
-          base: "http://s3.amazonaws.com/<%=cfg.awsBucket%>/<%=cfg.projectName%>"
+          base: "http://s3.amazonaws.com/<%=cfg.awsBucket%>/<%=campaignSelected%>"
         },
         files: [{
           expand: true,
