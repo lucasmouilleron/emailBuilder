@@ -1,7 +1,7 @@
 {
   "projectName":"my-test",
   "testSender":"fill in",
-  "testReciever":"fill in",
+  "testReciever":"fill in (can be an array)",
   "awsKey":"fill in",
   "awsSecretAccessKey":"fill in",
   "awsRegion":"us-east-1",

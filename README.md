@@ -3,9 +3,10 @@ The email-builder
 
 A grunt based email builder for designing, testing and publishing.
 
-Multiple campaigns and email ready.
-
-Relies on the Ink framework from Zurb for templates.
+- Multiple campaigns and email ready.
+- Relies on the Ink framework from Zurb for templates.
+- Saas, handlebars
+- 
 
 Installation
 ------------
@@ -45,6 +46,7 @@ Sending
 - Email sending is taking care by mandrill, which is great
 - Create a manrill account and an API key
 - Configure the builder : set ```testSender```, ```testReciever``` and ```mandrillKey``` in ```config.json```
+- ```testReciever``` can be an array for multiple receipents
 
 CDN
 ---
