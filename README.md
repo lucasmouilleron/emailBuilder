@@ -3,8 +3,8 @@ The email-builder
 
 A grunt based email builder for designing, testing and publishing.
 
-- Multiple campaigns and email ready.
-- Relies on the Ink framework from Zurb for templates.
+- Multiple campaigns and email
+- Templates : Ink from Zurb, Mailchimp blueprints
 - Saas, handlebars
 - Mandrill, AWS S3
 
@@ -43,7 +43,8 @@ Templates
 ---------
 - Emails are written with handlebars format
 - Assets basepath is ```./``` : ```<img src="logo.png" height="50" alt="Mailgun">``` or ```<link href="main.css" media="all" rel="stylesheet" type="text/css"/>```
-- Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php) : in ```campaigns-archive/zurb-campaign```
+- Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php) : in ```campaigns-archive/_zurb```
+- Mailchimp responsive blueprints : [sources](https://github.com/mailchimp/Email-Blueprints) : in ```campaigns-archive/_mailchimp```
 
 Sending
 -------

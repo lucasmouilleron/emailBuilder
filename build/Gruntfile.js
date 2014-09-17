@@ -22,8 +22,9 @@ var subjectSend = grunt.option("subject");
 if(["send","test","build","prod","watchit","mailchimp"].contains(task)) {
   if(campaignSelected == undefined || !grunt.file.exists(campaignSelectedPath)) {
     breakLine();
-    grunt.fail.warn("You have to speficy an existing campaign to send with --campaign=the_campaign_folder_name");  
+    grunt.log.warn("You have to speficy an existing campaign to send with --campaign=the_campaign_folder_name");  
     grunt.log.warn("Available campaigns : "+availableCampaigns.join(", ").blue);
+    fail();
   }
   if(["send","test"].contains(task)) {
     if(emailSelected == undefined || !grunt.file.exists(emailSelectedPath)) {
@@ -86,7 +87,7 @@ grunt.initConfig({
       flatten: true
     },
     pages: {
-      src: ["<%=src%>/*.hbs"],
+      src: ["<%=src%>/*.{hbs,html}"],
       dest: "<%=dist%>"
     }
   },
@@ -118,7 +119,7 @@ grunt.initConfig({
     }
   },
   watch: {
-    files: ["<%=src%>/scss/*","<%=src%>/*"],
+    files: ["<%=src%>/**/*"],
     tasks: ["build"]
   },
   mandrill: {
@@ -152,9 +153,7 @@ grunt.initConfig({
         bucket: "<%=cfg.awsBucket%>",
         differential: true 
       },
-      files: [
-      {expand: true, flatten:true, cwd: "<%=src%>", src: ["images/**","files/**"], dest: "<%=campaignSelected%>", filter: "isFile"},
-      ]
+      files: [{expand: true, flatten:true, cwd: "<%=src%>", src: ["**/*.{hbs,html}","images/**","files/**"], dest: "<%=campaignSelected%>", filter: "isFile"}]
     }
   },
   compress: {
