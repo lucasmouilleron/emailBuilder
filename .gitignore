@@ -1,6 +1,6 @@
-build/.sass-cache
-build/config.json
-build/node_modules
-campaigns-dist
+/build/.sass-cache
+/build/node_modules
+config.json
+/campaigns-dist
 npm-debug.log
 .DS_Store

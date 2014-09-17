@@ -1,6 +1,6 @@
 {
-  "testSender":"fill in",
-  "testReciever":"fill in (can be an array)",
+  "sender":"fill in",
+  "receiver":"fill in (can be an array)",
   "awsKey":"fill in",
   "awsSecretAccessKey":"fill in",
   "awsRegion":"us-east-1",

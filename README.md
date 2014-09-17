@@ -22,7 +22,7 @@ Run
 ---
 - ```cd build```
 - ```npm install```
-- ```cp config.json.sample config.json```
+- ```cp campaigns/config.json.sample campaigns/config.json```
 - Type ```grunt``` and follow instructions
 
 Tasks
@@ -35,16 +35,21 @@ Tasks
 
 Campaigns
 ---------
-- Archives and templates are located ```campaign-archives``` and ```campaign-archives/_templates```
+- Archives and templates are located ```campaign-archives```
 - Campaigns are located in ```campaigns```
 - One campaign can contain more than one email
+- Configuration : 
+    - Global config is defined in ```campaigns/config.json```
+    - Per campaign config can be overrided : add a ```config.json``` file in the campaign folder
 
-Templates
----------
+Emails
+------
 - Emails are written with handlebars format
 - Assets basepath is ```./``` : ```<img src="logo.png" height="50" alt="Mailgun">``` or ```<link href="main.css" media="all" rel="stylesheet" type="text/css"/>```
-- Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php) : in ```campaigns-archive/_zurb```
-- Mailchimp responsive blueprints : [sources](https://github.com/mailchimp/Email-Blueprints) : in ```campaigns-archive/_mailchimp```
+- Templates : 
+    - Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php) : in ```campaigns-archive/_zurb```
+    - Mailchimp responsive blueprints : [sources](https://github.com/mailchimp/Email-Blueprints) : in ```campaigns-archive/_mailchimp```
+    - Mailgun transactional emails : [sources](https://github.com/mailgun/transactional-email-templates) : in ```campaigns-archive/_mailgun```
 
 Sending
 -------
