@@ -1,6 +1,6 @@
 {
   "sender":"fill in",
-  "receiver":"fill in (can be an array)",
+  "receivers":"fill in (can be an array)",
   "awsKey":"fill in",
   "awsSecretAccessKey":"fill in",
   "awsRegion":"us-east-1",

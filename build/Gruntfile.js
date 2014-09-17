@@ -56,6 +56,9 @@ module.exports = function(grunt) {
     if(subjectSend != undefined) {
       grunt.log.ok("Subject : "+subjectSend.green);
     }
+    if(["send","test"].contains(task)) {
+      grunt.log.ok("Receivers : "+cfg.receivers.join(", ").green);
+    }
     if(["send"].contains(task)) {
       if(prompt("Are you sure you want to send this email (y/N) ? ").toLowerCase() != "y") {
         fail();
@@ -143,7 +146,7 @@ module.exports = function(grunt) {
         options: {
           key: "<%=cfg.mandrillKey%>",
           sender: "<%=cfg.sender%>",
-          recipient: "<%=cfg.receiver%>",
+          recipient: "<%=cfg.receivers%>",
           subject: "Email test for <%=campaignSelected%> / <%=emailSelected%>"
         },
         src: ["<%=dist%>/<%=emailSelected%>.html"]
@@ -152,7 +155,7 @@ module.exports = function(grunt) {
         options: {
           key: "<%=cfg.mandrillKey%>",
           sender: "<%=cfg.sender%>",
-          recipient: "<%=cfg.receiver%>",
+          recipient: "<%=cfg.receivers%>",
           subject: "<%=subjectSend%>"
         },
         src: ["<%=dist%>/<%=emailSelected%>.html"]

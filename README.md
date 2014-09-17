@@ -55,19 +55,18 @@ Sending
 -------
 - Email sending is taking care by mandrill, which is great
 - Create a manrill account and an API key
-- Configure the builder : set ```testSender```, ```testReciever``` and ```mandrillKey``` in ```config.json```
-- ```testReciever``` can be an array for multiple receipents
+- Configuration : ```subject```, ```sender```, ```receivers``` and ```mandrillKey``` in ```config.json``` (global or local)
 
 CDN
 ---
 - Uses AWS S3 as a CDN
-- Configure the builder : set ```awsKey```, ```awsSecretAccessKey``` and ```awsBucket``` in ```config.json```
+- Configuration : set ```awsKey```, ```awsSecretAccessKey``` and ```awsBucket``` in ```config.json``` (global or local)
 - Create the bucket on S3 (the name you defined in ```awsBucket```)
 
 Litmus
 ------
 - Create a test project in Litmus
-- Change the ```testReciever``` in ```config.json``` to the adress given by Litmus
+- Change the ```receivers``` in ```config.json``` to the adress given by Litmus
 
 Credits
 -------
