@@ -29,17 +29,21 @@ Tasks
 -----
 - ```grunt build``` : Builds a campaign to ```campaign-dist/campaign_name```
 - ```grunt watchit``` : Watches and builds a campaign
-- ```grunt cdn``` : CDNifies assets and emails for a campaign (the ```campaign-dist/campaign_name``` html files are production ready)
-- ```grunt send``` : Sends a test email of a campaign
+- ```grunt prod``` : Prepare campaign for prod (CDNfys assets) (the ```campaign-dist/campaign_name``` html files are production ready)
+- ```grunt test``` : Sends a test email of a campaign (requires CDN)
+- ```grunt send``` : Sends an email of a campaign (requires CDN)
 
 Campaigns
 ---------
 - Archives and templates are located ```campaign-archives``` and ```campaign-archives/_templates```
 - Campaigns are located in ```campaigns```
 - One campaign can contain more than one email
+
+Templates
+---------
 - Emails are written with handlebars format
-- Based on the Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php)
-- Assets basepath is ```./``` : ```<img src="img/logo.png" height="50" alt="Mailgun">``` or ```<link href="css/main.css" media="all" rel="stylesheet" type="text/css"/>```
+- Assets basepath is ```./``` : ```<img src="logo.png" height="50" alt="Mailgun">``` or ```<link href="main.css" media="all" rel="stylesheet" type="text/css"/>```
+- Ink framework from Zurb : [classes and guidelines doc](http://zurb.com/ink/docs.php) : in ```campaigns-archive/zurb-campaign```
 
 Sending
 -------
