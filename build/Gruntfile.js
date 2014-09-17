@@ -92,7 +92,8 @@ module.exports = function(grunt) {
       options: {
         force: true
       },
-      postInline: ["<%=dist%>/css"],
+      preBuild: ["<%=dist%>/*"],
+      postBuild: ["<%=dist%>/css"],
       all: [distPath]
     },
     premailer: {
@@ -169,7 +170,7 @@ module.exports = function(grunt) {
   /////////////////////////////////////////////////////////////////////////////
   grunt.registerTask("default", "Help instructions", ["help"]);
   grunt.registerTask("help", "Help instructions", ["availabletasks"]);
-  grunt.registerTask("build", "Build a campaign (--campaign=the_campaign_folder_name)", ["mkdir:init","sass","assemble","copy","premailer","clean:postInline"]);
+  grunt.registerTask("build", "Build a campaign (--campaign=the_campaign_folder_name)", ["mkdir:init","clean:preBuild","sass","assemble","copy","premailer","clean:postBuild"]);
   grunt.registerTask("send", "Send an email of a campaign (--campaign=the_campaign_folder_name, --email=the_email_file_name_without_extension)", ["cdn","mandrill"]);
   grunt.registerTask("cdn", "CDNfys assets and emails of a campaign (--campaign=the_campaign_folder_name)", ["build","aws_s3","cdnify"]);
   grunt.registerTask("cleanup", "Clean everything", ["clean:all"]);

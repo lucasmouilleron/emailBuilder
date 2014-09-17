@@ -1,13 +1,18 @@
 ---
-subject: Basic responsive email
+header: "Hi, Lucas Mouilleron"
+subheader: "Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna."
+email: lucas.mouilleron@me.com
+telephone: +33 (0)6 13 93 20 22
+lab: http://lab.thecreativetechnology.com
+blog: http://thecreativetechnology.com
 ---
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width"/>
-  <link href="css/basic.css" media="all" rel="stylesheet" type="text/css" />
-  <title>{{subject}}</title>
+  <link href="css/main.css" media="all" rel="stylesheet" type="text/css" />
+  <title>{{header}}</title>
 </head>
 <body>
   <table class="body">
@@ -56,9 +61,8 @@ subject: Basic responsive email
                       <table class="twelve columns">
                         <tr>
                           <td>
-                            <h1>Hi, Susan Calvin</h1>
-                            <p class="lead">Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae.</p>
-                            <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. consequat vel lacus. Sed iaculis pulvinar ligula, ornare fringilla ante viverra et. In hac habitasse platea dictumst. Donec vel orci mi, eu congue justo. Integer eget odio est, eget malesuada lorem. Aenean sed tellus dui, vitae viverra risus. Nullam massa sapien, pulvinar eleifend fringilla id, convallis eget nisi. Mauris a sagittis dui. Pellentesque non lacinia mi. Fusce sit amet libero sit amet erat venenatis sollicitudin vitae vel eros. Cras nunc sapien, interdum sit amet porttitor ut, congue quis urna.</p>
+                            <h1>{{header}}</h1>
+                            <p>{{subheader}}</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -76,6 +80,7 @@ subject: Basic responsive email
                         <tr>
                           <td class="panel">
                             <p>Phasellus dictum sapien a neque luctus cursus. Pellentesque sem dolor, fringilla et pharetra vitae. <a href="#">Click it! »</a></p>
+
                           </td>
                           <td class="expander"></td>
                         </tr>
@@ -85,63 +90,47 @@ subject: Basic responsive email
                   </tr>
                 </table>
 
-                <table class="row footer">
+                <table class="row callout">
                   <tr>
-                    <td class="wrapper">
-
-                      <table class="six columns">
+                    <td class="wrapper offset-by-four">
+                    <table class="four columns">
                         <tr>
-                          <td class="left-text-pad">
-
-                            <h5>Connect With Us:</h5>
-
-                            <table class="tiny-button facebook">
-                              <tr>
-                                <td>
-                                  <a href="#">Facebook</a>
-                                </td>
-                              </tr>
-                            </table>
-
-                            <br>
-
-                            <table class="tiny-button twitter">
-                              <tr>
-                                <td>
-                                  <a href="#">Twitter</a>
-                                </td>
-                              </tr>
-                            </table>
-
-                            <br>
-
-                            <table class="tiny-button google-plus">
-                              <tr>
-                                <td>
-                                  <a href="#">Google +</a>
-                                </td>
-                              </tr>
-                            </table>
-
+                          <td class="center">
+                            <center>
+                              <table class="button">
+                                <tr>
+                                  <td>
+                                    <a href="#">Click Me!</a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
                           </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
 
                     </td>
-                    <td class="wrapper last">
+                  </tr>
+                </table>
 
-                      <table class="six columns">
+
+                <table class="row footer">
+                  <tr>
+                    <td class="wrapper last">
+                      <table class="twelve columns">
                         <tr>
-                          <td class="last right-text-pad">
-                            <h5>Contact Info:</h5>
-                            <p>Phone: 408.341.0600</p>
-                            <p>Email: <a href="mailto:hseldon@trantor.com">hseldon@trantor.com</a></p>
+                          <td class="panel">
+
+                            <h2>Contact us</h2>
+                            <p><a href="{{blog}}">{{blog}}</a></p>
+                            <p><a href="{{lab}}">{{lab}}</a></p>
+                            <p><a href="mailto:{{email}}">{{email}}</a></p>
+                            <p>{{telephone}}</p>
                           </td>
                           <td class="expander"></td>
                         </tr>
                       </table>
-
                     </td>
                   </tr>
                 </table>
