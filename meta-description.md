@@ -1,6 +1,6 @@
 A grunt based email builder for designing, testing and publishing.
 
-## Features
+# Features
 - Assisted building
 - Multiple campaigns and email
 - Stack : Saas, handlebars, CDN
@@ -8,7 +8,7 @@ A grunt based email builder for designing, testing and publishing.
 - Tests : email, litmus
 - Services : Mandrill, AWS S3 as CDN
 
-## Credits
+# Credits
 Lucas Mouilleron @ Diplomatic Cover
 http://diplomatic-cover.com
 http://lucasmouilleron.com
