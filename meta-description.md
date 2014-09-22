@@ -9,6 +9,6 @@ A grunt based email builder for designing, testing and publishing.
 - Services : Mandrill, AWS S3 as CDN
 
 # Credits
-Lucas Mouilleron @ Diplomatic Cover
-http://diplomatic-cover.com
-http://lucasmouilleron.com
+- Lucas Mouilleron @ Diplomatic Cover
+- http://diplomatic-cover.com
+- http://lucasmouilleron.com
