@@ -1,4 +1,4 @@
-The email-builder
+The emailBuilder
 =================
 
 A grunt based email builder for designing, testing and publishing.
