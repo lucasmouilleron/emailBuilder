@@ -10,5 +10,5 @@ A grunt based email builder for designing, testing and publishing.
 
 # Credits
 - Lucas Mouilleron @ Diplomatic Cover
-- http://diplomatic-cover.com
-- http://lucasmouilleron.com
+- [http://diplomatic-cover.com](http://diplomatic-cover.com)
+- [http://lucasmouilleron.com](http://lucasmouilleron.com)
