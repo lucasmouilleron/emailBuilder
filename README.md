@@ -20,14 +20,14 @@ Installation
 
 Run
 ---
-- `cd build`
+- `cd _build`
 - `npm install`
 - `cp campaigns/config.json.sample campaigns/config.json`
 - Type `grunt` and follow instructions
 
 Tasks
 -----
-- `grunt build` : Builds a campaign to `campaign-dist/campaign_name`
+- `grunt _build` : Builds a campaign to `campaign-dist/campaign_name`
 - `grunt watchit` : Watches and builds a campaign
 - `grunt prod` : Prepare campaign for prod (CDNfys assets) (the `campaign-dist/campaign_name` html files are production ready)
 - `grunt test` : Sends a test email of a campaign (requires CDN)
